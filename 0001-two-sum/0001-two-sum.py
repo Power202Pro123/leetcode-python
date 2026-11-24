@@ -6,11 +6,15 @@ class Solution(object):
         :rtype: List[int]
         """
         Array = []
-        for x in range(0,len(nums)):
-            for y in range(0,len(nums)):
-                if x != y and nums[x] + nums[y] == target:
+        y = 0
+        for x in range(1,len(nums)):
+            for y in range(0,x):
+                if nums[x] + nums[y] == target:
                     Array.append(x)
                     Array.append(y)
                     return Array
+
+
+            
 
         
